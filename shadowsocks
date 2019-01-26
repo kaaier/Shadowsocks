@@ -1,0 +1,29 @@
+https://shadowsocks.org/en/download/clients.html
+
+
+Ubuntu
+latest AppImage file from Releases page. Then
+
+chmod a+x Shadowsocks-Qt5-x86_64.AppImage
+./Shadowsocks-Qt5-x86_64.AppImage
+
+
+
+
+
+
+
+Compile
+cmake >= 3.1.0
+qt5-qtbase-gui >= 5.2 (qtbase5 in Debian/Ubuntu)
+qrencode (libqrencode in Debian/Ubuntu)
+libQtShadowsocks >= 1.10.0 (libqtshadowsocks in Debian/Ubuntu. DON'T use the trunk code)
+zbar (libzbar0 or libzbar in Debian/Ubuntu)
+libappindicator (libappindicator1 in Debian/Ubuntu)
+Check libQtShadowsocks Compiling wiki if you need to build it yourself.
+Compiling
+GNU/Linux
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+make -j4
+sudo make install
